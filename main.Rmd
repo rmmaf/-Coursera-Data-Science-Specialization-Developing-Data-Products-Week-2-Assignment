@@ -1,0 +1,27 @@
+---
+title: "Developing Data Products Week 2 Assignment"
+author: "Rodrigo Falcão"
+date: "`r Sys.Date()`"
+output: html_document
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Leaflet Map of My Hometown Tourist Attraction 
+Create a leaflet map object.
+```{r cars}
+library(leaflet)
+map <- leaflet() %>% addTiles()
+
+```
+
+Add the marker to the map and display the map.
+```{r}
+
+
+marcoZeroPopup <- c("<a href= 'https://www.tripadvisor.com.br/Attraction_Review-g304560-d2359523-Reviews-Praca_do_Marco_Zero-Recife_State_of_Pernambuco.html' >Praça do Marco Zero<br></a>")
+map %>%
+   addTiles() %>%
+   addMarkers(lng= -34.871139, lat= -8.063169, popup = marcoZeroPopup)
+```
